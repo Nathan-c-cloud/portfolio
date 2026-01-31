@@ -25,12 +25,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Portfolio - Ismaël AÏHOU | Full Stack Engineer",
+    title: "Ismaël AÏHOU",
     description: "Professional portfolio - Full Stack Engineer specialized in Cloud & DevOps. Discover my projects and technical skills.",
     keywords: ["Full Stack", "DevOps", "Cloud", "React", "Next.js", "TypeScript", "AWS", "Kubernetes", "Docker"],
     authors: [{name: "Ismaël AÏHOU"}],
     openGraph: {
-        title: "Portfolio - Ismaël AÏHOU | Full Stack Engineer",
+        title: "Ismaël AÏHOU - Full Stack Engineer",
         description: "Full Stack Engineer | Cloud & DevOps - Discover my projects and technical skills",
         type: "website",
         url: "https://ineaihou.dev",
