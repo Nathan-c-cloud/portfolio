@@ -17,10 +17,8 @@ export const projects: Project[] = [
       cloud: ['Vercel'],
     },
     links: {
-      // To be completed after Vercel deployment
-      demo: '', // Vercel link to add after deployment
-      // Temporary GitHub link (to be replaced with portfolio repo after push)
-      github: 'https://github.com/Nathan-c-cloud',
+      demo: 'https://ineaihou.dev',
+      github: 'https://github.com/Nathan-c-cloud/portfolio',
     },
     featured: true,
   },

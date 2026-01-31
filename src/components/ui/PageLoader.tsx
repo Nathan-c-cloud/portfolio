@@ -34,6 +34,9 @@ export default function PageLoader() {
   }, []);
 
   useEffect(() => {
+    // Prevent scrolling while loading
+    document.body.style.overflow = 'hidden';
+
     // Phase 1: Show initials (0-1200ms)
     const initialsTimer = setTimeout(() => {
       setShowInitials(false);
@@ -61,16 +64,16 @@ export default function PageLoader() {
 
       setTimeout(() => {
         setIsVisible(false);
+        // Restore scrolling when animation completes
+        document.body.style.overflow = 'unset';
       }, 800);
     }, 3500);
-
-    // Prevent scrolling while loading
-    document.body.style.overflow = 'hidden';
 
     return () => {
       clearTimeout(initialsTimer);
       clearTimeout(startTyping);
       clearTimeout(endTimer);
+      // Always restore scrolling on cleanup
       document.body.style.overflow = 'unset';
     };
   }, [fullName]);

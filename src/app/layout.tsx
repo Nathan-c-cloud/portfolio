@@ -33,7 +33,9 @@ export const metadata: Metadata = {
         title: "Portfolio - Ismaël AÏHOU | Full Stack Engineer",
         description: "Full Stack Engineer | Cloud & DevOps - Discover my projects and technical skills",
         type: "website",
+        url: "https://ineaihou.dev",
     },
+    metadataBase: new URL("https://ineaihou.dev"),
 };
 
 export default function RootLayout({

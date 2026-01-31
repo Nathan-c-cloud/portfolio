@@ -9,7 +9,7 @@ Modern professional portfolio with advanced animations and custom design system.
 
 ## 🚀 Live Demo
 
-🌐 [View Portfolio](https://your-domain.com) _(to be updated after deployment)_
+🌐 [View Portfolio](https://ineaihou.dev)
 
 ## ✨ Features
 
@@ -177,7 +177,7 @@ MIT License - Free to use with attribution
 ## 👤 Author
 
 **Ismaël AÏHOU**
-- Portfolio: [your-domain.com](https://your-domain.com)
+- Portfolio: [ineaihou.dev](https://ineaihou.dev)
 - GitHub: [@Nathan-c-cloud](https://github.com/Nathan-c-cloud)
 - LinkedIn: [ismael-aihou](https://linkedin.com/in/ismael-aihou)
 
