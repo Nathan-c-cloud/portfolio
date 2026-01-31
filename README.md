@@ -1,49 +1,188 @@
-# 🚀 Portfolio Professionnel
+# Personal Portfolio - Ismaël AÏHOU
 
-Portfolio moderne et professionnel d'un Ingénieur Full Stack passionné par le Cloud & DevOps.
+Modern professional portfolio with advanced animations and custom design system.
 
-Créé avec [Next.js](https://nextjs.org) 16 et [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Next.js](https://img.shields.io/badge/Next.js-15-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.0-ff0055)
 
-## ✨ Fonctionnalités
+## 🚀 Live Demo
 
-- ⚡ **Next.js 16** avec App Router et React 19
-- 🎨 **Tailwind CSS v4** pour un design moderne
-- 🎭 **Framer Motion** pour des animations fluides
-- 🌙 **Dark Mode** par défaut
-- 📱 **Responsive** sur tous les appareils
-- 🚀 **Performance optimisée** avec TypeScript
+🌐 [View Portfolio](https://your-domain.com) _(to be updated after deployment)_
 
-## Getting Started
+## ✨ Features
 
-First, run the development server:
+### 🎨 Design & UX
+- **Modern design** with dark mode by default
+- **Smooth animations** with Framer Motion
+- **Responsive** on all screens (mobile, tablet, desktop)
+- **Interactive particles** in background
+- **Colored particle trail** following mouse movement
+- **Reading progress bar**
 
+### 📱 Sections
+- **Hero** - Introduction with spectacular entrance animations
+- **About** - Professional journey and goals
+- **Projects** - Project showcase with interactive cards
+- **Skills** - Tech stack with animated icons and glow effects
+- **Contact** - Social media links and contact form
+
+### 🎭 Animations
+- Glassmorphism on header on scroll
+- Animated gradient on main title
+- Multi-layer glow effects on skills
+- Project cards with spectacular hover effects
+- Buttons with shine effect and scale animations
+- Colored particle trail following cursor
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Static typing for code safety
+- **Tailwind CSS v3** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+
+### Design System
+- **Devicon** - Official technology icons
+- **Lucide React** - Modern and consistent icons
+- **Custom CSS Variables** - Custom theme
+
+### Deployment
+- **Vercel** - Optimized deployment platform for Next.js
+- **Custom Domain** - DNS configuration with Namecheap/OVH
+
+## 📦 Installation
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Nathan-c-cloud/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run in development mode**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   ```
+   http://localhost:3000
+   ```
+
+## 🏗️ Build & Deployment
+
+### Local build
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Deploy on Vercel
+1. Push code to GitHub
+2. Import project on [Vercel](https://vercel.com)
+3. Configure custom domain
+4. Auto-deploy on every push
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+portfolio/
+├── public/              # Static files (images, CV, etc.)
+│   ├── cv.pdf
+│   └── images/
+├── src/
+│   ├── app/            # Next.js App Router
+│   │   ├── layout.tsx  # Main layout
+│   │   ├── page.tsx    # Home page
+│   │   └── globals.css # Global styles
+│   ├── components/     # React components
+│   │   ├── layout/     # Header, Footer
+│   │   ├── sections/   # Hero, About, Projects, Skills, Contact
+│   │   └── ui/         # Reusable components
+│   ├── lib/           # Utilities and data
+│   │   └── data/      # Projects and skills data
+│   └── types/         # TypeScript types
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+└── next.config.ts
+```
 
-## Learn More
+## 🎨 Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Update personal information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Projects** - Edit `src/lib/data/projects.ts`
+```typescript
+export const projects: Project[] = [
+  {
+    title: 'My Project',
+    description: 'Description...',
+    tags: ['React', 'TypeScript'],
+    // ...
+  }
+];
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Skills** - Edit `src/lib/data/skills.ts`
+```typescript
+export const skillsByCategory = {
+  development: ['Java', 'TypeScript', ...],
+  // ...
+};
+```
 
-## Deploy on Vercel
+**Contact information** - Edit sections `Hero.tsx`, `About.tsx`, `Contact.tsx`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Modify theme
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Edit `src/app/globals.css` to change colors:
+```css
+:root {
+  --accent-primary: #00d9ff;
+  --accent-secondary: #7c3aed;
+  /* ... */
+}
+```
+
+## 📝 To-Do
+
+- [ ] Add more real projects
+- [ ] Integrate functional contact form (EmailJS, Formspree)
+- [ ] Add Blog section (optional)
+- [ ] Optimize images with next/image
+- [ ] Add unit tests
+
+## 🤝 Contributing
+
+This portfolio is a personal project. Feel free to use it as inspiration for your own!
+
+## 📄 License
+
+MIT License - Free to use with attribution
+
+## 👤 Author
+
+**Ismaël AÏHOU**
+- Portfolio: [your-domain.com](https://your-domain.com)
+- GitHub: [@Nathan-c-cloud](https://github.com/Nathan-c-cloud)
+- LinkedIn: [ismael-aihou](https://linkedin.com/in/ismael-aihou)
+
+---
+
+⭐ Feel free to star the repo if you find the project interesting!
+
+Developed with ❤️ by Ismaël AÏHOU
