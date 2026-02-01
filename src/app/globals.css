@@ -163,3 +163,47 @@ html {
     transform: translateX(100%) translateY(100%) rotate(45deg);
   }
 }
+
+/* Custom Scrollbar Design */
+/* Pour les navigateurs Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: 10px;
+  margin: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  border-radius: 10px;
+  border: 2px solid var(--background);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    var(--accent-secondary),
+    var(--accent-primary)
+  );
+  border-color: var(--border);
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--accent-primary);
+}
+
+/* Pour Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--background);
+}

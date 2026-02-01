@@ -1,11 +1,17 @@
-1- Revoir la vue pour l'affichage mobile parce qu'on ne
-peut pas survoler les éléments donc sur les projets on
-peut pas voir les bouton du repo github ni de la demo live : donc voir comment faire
+# Portfolio TO-DO List
 
-2- ameliorer le design de la barre de scrolling pour qu'elle soit
-uniforme avec le site
+## ✅ Terminé
 
-3- enlever les emojis des filtre de competences
+1. ✅ Revoir la vue pour l'affichage mobile - Les boutons GitHub/demo sont maintenant visibles sur mobile
+2. ✅ Améliorer le design de la barre de scrolling - Scrollbar moderne avec gradient et effets
+3. ✅ Enlever les emojis des filtres de compétences - Design plus professionnel
+4. ✅ Revoir le lien LinkedIn dans la section contact - Lien corrigé vers https://linkedin.com/in/ismael-aihou
 
-4- ajouter une rubrique de "certifications et big millestone (hackathon gcp)" et potentiellement de "formations", centre d'interets
-ou directement parler de mes centres d'interets dans "about me"
+## 🔄 En cours / À faire
+
+5. ⚠️ Problème au niveau des routes du site (get in touch & view my projects) qui se figent dans la barre de navigation
+   - Logique améliorée mais besoin de plus de tests/ajustements
+
+6. 📋 Ajouter une rubrique "Certifications et Big Milestones (hackathon GCP)"
+   - Potentiellement ajouter "formations" et "centres d'intérêts"
+   - Ou intégrer les centres d'intérêts dans "About me"

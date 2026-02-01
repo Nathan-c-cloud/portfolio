@@ -114,13 +114,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             </motion.div>
           </div>
 
-          {/* Overlay au survol avec boutons */}
+          {/* Overlay au survol avec boutons - Toujours visible sur mobile, hover sur desktop */}
           <div
-            className="absolute inset-0 bg-[var(--background)]/80 backdrop-blur-sm flex items-center justify-center gap-4 transition-opacity duration-300 z-30"
-            style={{
-              opacity: isHovered ? 1 : 0,
-              pointerEvents: isHovered ? 'auto' : 'none',
-            }}
+            className={`absolute inset-0 bg-[var(--background)]/80 backdrop-blur-sm flex items-center justify-center gap-4 transition-opacity duration-300 z-30
+              opacity-100 md:opacity-0 ${isHovered ? 'md:!opacity-100' : ''}`}
           >
             {project.links.demo && (
               <a

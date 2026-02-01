@@ -21,22 +21,55 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Detect active section
+      // Detect active section - completely new simplified logic
       const sections = navItems.map(item => item.href.substring(1));
-      for (const section of sections) {
+
+      // If we're at the very top of the page, no section is active
+      if (window.scrollY < 50) {
+        setActiveSection('');
+        return;
+      }
+
+      // Find which section is currently most visible in viewport
+      let currentSection = '';
+
+      // Loop through sections in reverse order (bottom to top)
+      // This ensures we get the last section that's above the fold
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
         const element = document.getElementById(section);
+
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            setActiveSection(section);
-            break;
+          // Check if section top has passed the top of viewport (with offset)
+          if (rect.top <= 100) {
+            currentSection = section;
+            break; // Found the active section, stop looking
           }
         }
       }
+
+      // Always update (no condition)
+      setActiveSection(currentSection);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Run once on mount
+    handleScroll();
+
+    // Add scroll listener with throttling for performance
+    let ticking = false;
+    const scrollListener = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', scrollListener, { passive: true });
+    return () => window.removeEventListener('scroll', scrollListener);
   }, []);
 
   const scrollToSection = (href: string) => {

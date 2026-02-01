@@ -39,7 +39,7 @@ export default function Skills() {
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--accent-secondary)]/10 border border-[var(--accent-secondary)]/20 text-sm text-[var(--accent-secondary)] font-medium"
             >
-              🛠️ Skills
+              Skills
             </motion.div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold">
@@ -71,14 +71,13 @@ export default function Skills() {
                 onClick={() => setSelectedCategory(key)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-6 py-3 rounded-full font-medium transition-all flex items-center gap-2 ${
+                className={`px-6 py-3 rounded-full font-medium transition-all ${
                   selectedCategory === key
                     ? 'bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] text-white shadow-lg'
                     : 'bg-[var(--surface)] border border-[var(--border)] text-[var(--foreground)]/70 hover:border-[var(--accent-primary)]'
                 }`}
               >
-                <span>{info.icon}</span>
-                <span>{info.title}</span>
+                {info.title}
               </motion.button>
             ))}
           </div>

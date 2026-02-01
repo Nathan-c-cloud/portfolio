@@ -36,6 +36,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       return (
         <a
           href={href}
+          onClick={(e) => {
+            // If it's an anchor link (starts with #), handle smooth scroll
+            if (href.startsWith('#')) {
+              e.preventDefault();
+              const element = document.querySelector(href);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }
+          }}
           className={cn(baseStyles, variants[variant], sizes[size], className)}
         >
           {shineEffect}

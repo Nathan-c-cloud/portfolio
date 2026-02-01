@@ -40,7 +40,7 @@ export default function Contact() {
             </motion.a>
 
             <motion.a
-              href="www.linkedin.com/in/ismael-aihou"
+              href="https://linkedin.com/in/ismael-aihou"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-3 p-6 rounded-xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-primary)] transition-all cursor-pointer"

@@ -71,32 +71,26 @@ export const skillsByCategory = {
 export const categoryInfo = {
   development: {
     title: 'Development',
-    icon: '💻',
     color: 'from-blue-500 to-cyan-500'
   },
   database: {
     title: 'Databases',
-    icon: '🗄️',
     color: 'from-green-500 to-emerald-500'
   },
   devops: {
     title: 'DevOps & Cloud',
-    icon: '☁️',
     color: 'from-purple-500 to-pink-500'
   },
   quality: {
     title: 'Quality & Testing',
-    icon: '✅',
     color: 'from-orange-500 to-red-500'
   },
   management: {
     title: 'Project Management',
-    icon: '📊',
     color: 'from-indigo-500 to-blue-500'
   },
   ai: {
     title: 'AI Tools',
-    icon: '🤖',
     color: 'from-violet-500 to-purple-500'
   }
 };
